@@ -1,0 +1,49 @@
+//код с точки зрения DRY, KISS, YAGNI, SOLID. По каждому из принципов сделалано как минимум одно исправление.
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IC "Repair Design Project"</title>
+  <link rel="stylesheet" href="css/style.css" type="text/css" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap" rel="stylesheet" />
+  <!--[if IE
+      ]><script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script
+    ><![endif]-->
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="header-content">
+        <div class="header-logo">
+          <a class="header-logo__link">IC "Repair Design Project"</a>
+        </div>
+        <nav>
+          <ul class="header-menu">
+            ${generateMenuItem('HOME')}
+            ${generateMenuItem('PROJECTS')}
+            ${generateMenuItem('MEASUREMENT')}
+            ${generateMenuItem('TEAM')}
+            ${generateMenuItem('REVIEWS')}
+            ${generateMenuItem('CONTACTS')}
+          </ul>
+        </nav>
+        <div class="header-tel">
+          <a class="header-tel__link" href="tel:+79287683239">+7(928)-768-32-39</a>
+        </div>
+        <button class="button header-button">Request a call</button>
+      </div>
+    </header>
+  </div>
+</body>
+</html>
+
+<script>
+  function generateMenuItem(name) {
+    return `<li class="header-menu__item"><a href="#">${name}</a></li>`;
+  }
+</script>
